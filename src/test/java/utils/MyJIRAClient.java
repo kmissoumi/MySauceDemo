@@ -36,7 +36,7 @@ public class MyJIRAClient {
     
     private static void processCommand(String command, String params) {
 
-    	String url = "https://etiennetest.atlassian.net/rest/api/latest";
+    	String url = "https://xxxxx.atlassian.net/rest/api/latest";
     	JSONObject payload = null;
     	
     	if(command.equals("GetIssue")) {
@@ -126,7 +126,7 @@ public class MyJIRAClient {
     	HttpPost post = new HttpPost(url);
     	post.addHeader("Accept" , "application/json");
     	post.addHeader("Content-Type" , "application/json");
-    	post.addHeader("Authorization" , "Basic cGF1bGV0aWVubmVzaWxsb25AeWFob28uY29tOkVkQTFocmtKbmdabndLN2tIRkFFOEVBRA==");
+    	post.addHeader("Authorization" , "Basic xxxxxxxxxxxxxxx");
 
 	    try {
     		
@@ -185,7 +185,7 @@ public class MyJIRAClient {
 
         try {
     		
-       	 	UsernamePasswordCredentials creds = new UsernamePasswordCredentials("pauletiennesillon@yahoo.com", "EdA1hrkJngZnwK7kHFAE8EAD");
+       	 	UsernamePasswordCredentials creds = new UsernamePasswordCredentials("email", "key");
        	 	httpGet.addHeader(new BasicScheme().authenticate(creds, httpGet));
 
        	 	HttpResponse response = httpclient.execute(httpGet);
